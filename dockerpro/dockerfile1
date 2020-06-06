@@ -1,0 +1,22 @@
+FROM ubuntu:16.04
+LABEL name="birju"
+RUN pwd>/tmp/1stpwd.txt
+RUN cd /tmp/
+RUN pwd>/tmp/2ndpwd.txt
+WORKDIR /tmp
+RUN pwd>/tmp/3ndpwd.txt
+RUN apt-get update && apt-get install -y vim && apt-get install -y python
+RUN useradd -d /home/birju -g root -G sudo -m -p pass123 birju
+#RUN useradd -d /home/birju -g root -G sudo -m -p $(echo "pass123" | openssl passwd -1 -stdin) birju
+RUN apt-get install -y openssh-server && apt-get install -y openssh-client
+RUN apt-get install -y python-pip
+COPY requirements.txt /tmp
+RUN pip install -r requirements.txt
+RUN whoami>/tmp/1.txt
+USER birju
+RUN whoami>/tmp/2.txt
+RUN mkdir -p /tmp/pro
+ADD composeexample.tgz /tmp/pro/
+EXPOSE 22
+#CMD ["/usr/sbin/sshd", "-D"]
+#CMD ["python"]

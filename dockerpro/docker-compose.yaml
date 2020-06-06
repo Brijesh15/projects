@@ -1,0 +1,37 @@
+version: '3'
+
+services:  
+  db:
+    image: mysql:5.7
+    #restart: always
+    environment:
+      - MYSQL_DATABASE="dockerDB"
+      - MYSQL_USER="root"
+      - MYSQL_PASSWORD="root@123" 
+      - MYSQL_ROOT_PASSWORD="root@123" 
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    ports:
+      - "3307:3307"
+    volumes:
+      #      - /home/brijesh/Python/mysqlVol:/var/lib/mysql  
+      - /home/brijesh/dockerpro/mysql:/var/lib/mysql  
+
+  web:
+    build:
+      context: . 
+      dockerfile: ubuntudockerfile
+    ##    restart: always  
+    volumes:
+      - /home/brijesh/dockerpro/djangoServer:/project 
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    links: 
+      - db    
+        
+#volumes:
+#  my-db:  
+#    volumes:
+#      - .:/code
+#    links: db    

@@ -1,0 +1,468 @@
+Why Python:
+  
+   >  Python is open source, easy to learn, high lable language.
+   >  Portable (it could be on linux, windows, Mac Os ect) & Extensible (easily integrate with java and also invoke C or C++ library)
+   > Web Dovelopment (Django, flask, Pylons etc).
+   > Artificial intelligence 
+       library 
+       Scikit-learn   used for complex calculation in a statement.
+       tensorflow     ml functionality used to make the machine mimic the human brain.   
+       Opencv         used for image recognation, face detection, detect hand writing. 
+   > computer graphics
+      GUI (Tkinter library to create GUI application), Desktop Application, Game dovelopment(pygame library)
+   > Big data (Pydoop, dask, pyspark)
+   > Scripting: Automation
+       > It is the most popular scripting language in the industry.
+       > Automate certain tasks in a program.
+       > They are interpreted rather than being compiled.   
+
+Decorators
+
+In Python, functions are the first class objects, which means that –
+
+Functions are objects; they can be referenced to, passed to a variable and returned from other functions as well.
+Functions can be defined inside another function and can also be passed as argument to another function.
+Decorators are very powerful and useful tool in Python since it allows programmers to modify the behavior of function or class. Decorators allow us to wrap another function in order to extend the behavior of wrapped function, without permanently modifying it.
+
+In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+
+Syntax for Decorator:
+
+filter_none
+brightness_4
+@gfg_decorator
+def hello_decorator(): 
+    print("Gfg") 
+  
+'''Above code is equivalent to - 
+  
+def hello_decorator(): 
+    print("Gfg") 
+      
+hello_decorator = gfg_decorator(hello_decorator)'''
+Example:
+
+# defining a decorator 
+def hello_decorator(func): 
+  
+    # inner1 is a Wrapper function in  
+    # which the argument is called 
+      
+    # inner function can access the outer local 
+    # functions like in this case "func" 
+    def inner1(): 
+        print("Hello, this is before function execution") 
+  
+        # calling the actual function now 
+        # inside the wrapper function. 
+        func() 
+  
+        print("This is after function execution") 
+          
+    return inner1 
+  
+  
+# defining a function, to be called inside wrapper 
+def function_to_be_used(): 
+    print("This is inside the function !!") 
+  
+  
+# passing 'function_to_be_used' inside the 
+# decorator to control its behavior 
+function_to_be_used = hello_decorator(function_to_be_used) 
+  
+  
+# calling the function 
+function_to_be_used() 
+
+output:
+Hello, this is before function execution
+This is inside the function !!
+This is after function execution
+
+
+Closer:
+
+    This technique by which some data gets attached to the code is called closure in Python.
+
+This value in the enclosing scope is remembered even when the variable goes out of scope or the function itself is removed from the current namespace.
+
+When do we have a closure?
+As seen from the above example, we have a closure in Python when a nested function references a value in its enclosing scope.
+> We must have a nested function (function inside a function).
+> The nested function must refer to a value defined in the enclosing function.
+> The enclosing function must return the nested function.
+
+When to use closures?
+So what are closures good for?
+
+Closures can avoid the use of global values and provides some form of data hiding. It can also provide an object oriented solution to the problem.
+
+When there are few methods (one method in most cases) to be implemented in a class, closures can provide an alternate and more elegant solutions. But when the number of attributes and methods get larger, better implement a class.
+Example:
+
+def make_multiplier_of(n):
+    def multiplier(x):
+        return x * n
+    return multiplier
+
+# Multiplier of 3
+times3 = make_multiplier_of(3)
+
+# Multiplier of 5
+times5 = make_multiplier_of(5)
+
+# Output: 27
+print(times3(9))
+
+# Output: 15
+lprint(times5(3))
+
+# Output: 30
+print(times5(times3(2)))
+
+metaclass:
+
+   metaclass used to create mainly a dynamic class and create a object of a class.
+
+1. create a Dynamic class:
+   syntax:
+
+       type(className, baseClass, attributes_dict)
+
+       className > name of the class which you want to create.
+       baseclass > tuple which have base class you want to inherite
+       attributes_dict > attributes of a class for example class variable and methods etc.
+example:
+
+class A:
+    pass
+def fun():
+    pass
+
+kls = type('B', (A),{'var':1, 'fun':fun})
+
+2. create a object of class:
+
+   syntax:
+python 2.x    
+   class ExampleClass(object):
+      __metaclass__ = type
+      pass
+python 3.x
+   class ExampleClass(metaclass=type):
+      pass
+
+When a class is created, the interpreter:
+
+Gets the name of the class.
+Gets the base classes of the class.
+Gets the metaclass of the class. If it is defined, it will use this first. Otherwise, it will check in the base classes for the metaclass. It it can't find a metaclass in the base class, the type object is used instead.
+Gets the variables/attributes in the class and stores them as a dictionary.
+Passes this information to metaclass as metaclass(name_of_class, base_classes, attributes_dictionary) and it returns a class object.
+
+When type is called, its __call__ method is called. This method in turn calls the __new__ and __init__ methods. The __new__ method creates a new object, whereas the __init__ method initializes it. We can easily play with methods. This is a working example:
+
+class MyMeta(type):
+    def __new__(metaname, classname, baseclasses, attrs):
+        print 'New called with'
+        print 'metaname', metaname
+        print 'classname', classname
+        print 'baseclasses', baseclasses
+        print 'attrs', attrs 
+        return type.__new__(metaname, classname, baseclasses, attrs)
+
+    def __init__(classobject, classname, baseclasses, attrs):
+        print 'init called with'
+        print 'classobject', classobject
+        print 'classname', classname
+        print 'baseclasses', baseclasses
+        print 'attrs', attrs
+        classobject.data = 'brijesh'
+
+class Kls(object):
+    __metaclass__ = MyMeta
+
+    def __init__(self, data):
+        print 'kls init called with'
+        print self.data
+        self.data = data
+
+    def printd(self):
+        print self.data
+
+ik = Kls('arun')
+ik.printd()
+
+Note: if you want use __new__ method then you have to inherits object.  
+
+output:
+New called with
+metaname <class '__main__.MyMeta'>
+classname Kls
+baseclasses (<type 'object'>,)
+attrs {'__module__': '__main__', '__metaclass__': <class '__main__.MyMeta'>, 'printd': <function printd at 0x7fb5dba0e8c0>, '__init__': <function __init__ at 0x7fb5dba0e848>}
+init called with
+classobject <class '__main__.Kls'>
+classname Kls
+baseclasses (<type 'object'>,)
+attrs {'__module__': '__main__', '__metaclass__': <class '__main__.MyMeta'>, 'printd': <function printd at 0x7fb5dba0e8c0>, '__init__': <function __init__ at 0x7fb5dba0e848>}
+kls init called with
+brijesh
+arun
+
+Generators:
+   A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. If the body of a def contains yield, the function automatically becomes a generator function.
+   Generators function returned generator object and yield keyword returna a value.
+   Example
+def fib(limit):   
+    a, b = 0, 1
+    while a < limit: 
+        yield a 
+        a, b = b, a + b 
+  
+# Create a generator object 
+x = fib(5) 
+  
+# Iterating over the generator object using next 
+print(x.next()); # In Python 3, __next__() 
+print(x.next()); 
+print(x.next()); 
+print(x.next()); 
+print(x.next()); 
+  
+# Iterating over the generator object using for 
+# in loop. 
+print("\nUsing for in loop") 
+for i in fib(5):  
+    print(i)
+
+same for both Output :
+
+0
+1
+1
+2
+3
+
+__call__()
+    
+Technically __init__ is called once by __new__ when object is created, so that it can be initialized.
+
+But there are many scenarios where you might want to redefine your object, say you are done with your object, and may find a need for a new object. With __call__ you can redefine the same object as if it were new.
+
+super()
+   In Python, super() built-in has two major use cases:
+     Allows us to avoid using base class explicitly.
+     Working with Multiple Inheritance.
+ 
+class Mammal(object):
+   def __init__(self, mammalName):
+       print(mammalName, 'is a warm-blooded animal.')
+    
+class Dog(Mammal):
+   def __init__(self):
+       print('Dog has four legs.')
+       super().__init__('Dog')
+    
+d1 = Dog()
+  
+output:
+Dog has four legs.
+Dog is a warm-blooded animal. 
+Note: In case of multiple inheritance, super will use first inheritance as base class then second and so on.   
+
+Singleton:
+  A singleton is a class that makes sure only one instance of it is ever created. Typically such classes are used to manage resources that by their very nature can only exist once.
+  Example
+
+class Singleton(type):
+    _instance = {}
+    def __call__(cls, *args, **kwargs):
+        print"singleton is called"
+        if cls not in cls._instance:
+            cls._instance[cls]= super(Singleton, cls).__call__(*args, **kwargs)
+        return cls._instance[cls]
+
+
+class myclass():
+    __metaclass__ = Singleton
+
+    def __init__(self, name=None):
+        print"Initialiser is called"
+        self.name = name
+
+obj1 = myclass('Brijesh')
+obj2 = myclass('Chaudhary')
+print"obj address:",obj1, obj2
+print"name:",obj1.name, obj2.name
+
+property
+    ex. when there is a server and lots of clients in the system and when we have to modify the server for some resions, because of this we also have modify cliets as well. sometimes its very difficult to modify, to eliminates this we use property method in python
+
+this is the class to initialise a variable and convert a temperature to fahrenheit. 
+
+class Celsius(object):
+    def __init__(self, temperature = 0):
+        self.temperature = temperature
+        #self._temperature = temperature
+
+    def to_fahrenheit(self):
+        return (self._temperature * 1.8) + 32
+
+
+if someone says we can not set temperature below -273c, we have to modify server according to that and when modification is difficult from client side then we use property method  
+
+
+class Celsius(object):
+    def __init__(self, temperature = 0):
+        self.temperature = temperature     # call the setter method from the initialiser
+        #self._temperature = temperature   # we can not the setter method from the initialiser, we only call setter when we modify the values 
+
+    def to_fahrenheit(self):
+        return (self._temperature * 1.8) + 32
+
+    @property
+    def temperature(self):
+        print("Getting value")
+        return self._temperature
+
+    @temperature.setter
+    def temperature(self, value):
+        if value < -273:
+            raise ValueError("Temperature below -273 is not possible")
+        print("Setting value")
+        self._temperature = value
+
+    #temperature = property(get_temperature,set_temperature,)
+
+c = Celsius(10)
+print c.temperature
+c.temperature = 370
+print c.temperature
+   
+
+
+
+
+
+
+
+
+
+class method:-
+  A class method is a method that is bound to a class rather than its object. It doesn't require creation of a class instance.
+  
+  Syntax:-
+      
+           classmethod(function)
+           > The classmethod() method takes a single parameter:
+                 function - Function that needs to be converted into a class method 
+                  or  
+           @classmethod
+               def func(cls, args...) 
+
+  The class method can be called both by the class and its object.
+  Class.classmethod()
+  Or even
+  Class().classmethod()
+  Or even
+  objectOfClass.classmethod()
+  
+  Use of class method
+  Factory Method:
+      Factory methods are those methods which return a class object (like constructor) for different use cases.   
+
+Example:
+
+from datetime import date
+
+# random Person
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def fromBirthYear(cls, name, birthYear):
+        return cls(name, date.today().year - birthYear)
+
+    def display(self):
+        print(self.name + "'s age is: " + str(self.age))
+
+person = Person('Adam', 19)
+person.display()
+
+person1 = Person.fromBirthYear('John',  1985)
+person1.display()
+
+Static method:
+
+ Static methods, much like class methods, are methods that are bound to a class rather than its object, They do not require a class instance  
+ creation. So, they are not dependent on the state of the object. static method used as utility function. 
+  
+  Syntax:
+     staticmethod(function)
+            or
+     @staticmethod
+         def func(args, ...)
+
+  They can be called both by the class and its object.
+     Class.staticmethodFunc()
+     or even
+     Class().staticmethodFunc()
+     or even
+     objectOfClass.staticmethodFunc()
+   Example:
+class Dates:
+    def __init__(self, date):
+        self.date = date
+        
+    def getDate(self):
+        return self.date
+
+    @staticmethod
+    def toDashDate(date):
+        return date.replace("/", "-")
+
+date = Dates("15-12-2016")
+dateFromDB = "15/12/2016"
+dateWithDash = Dates.toDashDate(dateFromDB)
+
+if(date.getDate() == dateWithDash):
+    print("Equal")
+else:
+    print("Unequal")
+   
+The difference between a static method and a class method is:
+
+   Static method knows nothing about the class and just deals with the parameters.
+   Class method works with the class since its parameter is always the class itself.
+
+3GPP:
+   3GPP does define specifications for complete end-to-end cellular systems including the user equipment (or devices), radio access, core network, and service framework.
+
+MySQL:
+ 
+   MySQL is an open source relational database management system (RDBMS) based on Structured Query Language (SQL). we can use MySQl in e-commerce, and logging applications and web database.
+
+MongoDB:
+
+   MongoDB is an open source, NoSQL type, nonrelational management system (DBMS) that uses a document-oriented database model which supports various forms of data.Instead of using tables and rows as in relational databases, the MongoDB architecture is made up of collections and documents.
+
+Redis Server:
+
+   Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets ect. 
+
+
+
+
+
+
+
+
+
+
+
+
+

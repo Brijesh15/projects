@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QrCode!</title>
+
+		<style>
+			body {background-color: powderblue;}
+			h1   {color: blue;
+			      font-family: verdana;
+			      font-size: 200%;
+					  border: 2px solid powderblue;		
+			     }
+
+			div.list{
+				  position: relative;
+					left: 50px;
+			}
+			div.companyList{
+				  position: fixed;
+					left: 700px;
+					/*bottom: 550px;*/
+					top : 80px;	
+					color: blue;	
+			}
+			div.myform{
+				  position: relative;
+					left: 50px;
+					bottom: -40px;
+			}
+			div.export{
+				  position: fixed;
+					left: 150px;
+					bottom: 400px;
+					color: green;	
+			}
+			div.download{
+				  position: relative;
+					left: 50px;
+					bottom: -80px;
+			}
+			div.code{
+				  position: relative;
+					left: 50px;
+					bottom: -110px;
+			}			
+			div.Qrstatus{
+				  position: fixed;
+					left: 50px;
+					bottom: 200px;
+					color: green;	
+			}			
+		</style>
+
+	</head>
+	<body>
+		<h1>Home Page</h1>
+		<div class="list">
+			 <button type="button" onclick="getCompanies()">Get Companies List</button>
+		</div>
+		<div id="companyList" class="companyList"></div>
+		<div class="myform">
+			<form id="myform">
+				<label> Upload a file</label>
+				<input type="file" name="file" id="fileID"></br>
+				<label> Inter the company Id </label>
+				<input type="number" id="cName"></br>
+				<p> ONLY Accept CSV files </p>
+			 <button type="button" onclick="impExpCompanyQrcode()">Upload</button>
+			</form>
+		</div>
+		<div class="download">
+				<label> Inter the company Id to Download csv file</label>
+			  <input type="number" id="cname"></br>
+				<a href= "/impExpCompanyQrcode/"> download csv file</a>
+			  <!--button type="button">DownLoad csv</button-->	
+			  <!--button type="button" onclick="downloadcsv()">DownLoad csv</button-->
+		</div>
+		<div id="export csv" class="export"></div>
+		<!--div class="code">
+				<label> Inter the company Name </label>
+			  <input type="number" id="NAME"></br>
+			  <label> Inter the QRcode </label>
+			  <input type="text" id="qr">
+			 <button type="button" onclick="checkQrcode()">Check Qr Status</button>
+		</div--!>
+		<div id="Qrstatus" class="Qrstatus"></div>
+		<script type ="text/javascript">
+			function getCompanies(){
+				var txt ="";	
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				    if (this.readyState == 4 && this.status == 200) {
+               myObj = JSON.parse(this.responseText);
+				       console.log(myObj)
+							 txt += "<table border='2'>"
+							 txt += "<tr><td>" + "name" + " id" + "</td></tr>";
+							 for (x in myObj["items"]) {
+				          console.log(x)
+										txt += "<tr><td>" + myObj["items"][x].name + " " + myObj["items"][x].id + "</td></tr>";
+							 }
+						 	 txt += "</table>"
+                
+							      document.getElementById("companyList").innerHTML= txt
+									  //    this.responseText;
+										    }
+						  };
+				xhttp.open("GET", "/companies", true);
+				xhttp.send();
+		    }
+      function checkQrcode(){
+				console.log("check qr");
+				var NAME = document.getElementById('NAME').value;
+				var Qr = document.getElementById('qr').value;
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				    if (this.readyState == 4 && this.status == 200) {
+							      document.getElementById("Qrstatus").innerHTML =
+											      this.responseText;
+										    }
+						  };
+				console.log(NAME);
+				var data = JSON.stringify({"qr" : Qr});
+				xhttp.open("PUT", "/checkQrcode/" + NAME + "/status", true);
+				xhttp.setRequestHeader("Content-type", "application/json")
+				xhttp.send(data);
+			}
+      function impExpCompanyQrcode(){
+				var cName = document.getElementById('cName').value;
+			  var myform = document.getElementById('myform');
+		    var formData = new FormData(myform);
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				    if (this.readyState == 4 && this.status == 200) {
+							      document.getElementById("export csv").innerHTML =
+											      this.responseText;
+										    }
+						  };
+				xhttp.open("POST", "/impExpCompanyQrcode/" + cName , true);
+				//xhttp.setRequestHeader("Content-type", "multipart/form-data")
+				xhttp.send(formData);
+			}
+      function downloadcsv(){
+				var cname = document.getElementById('cname').value;
+				var xhttp = new XMLHttpRequest();
+				//xhttp.onreadystatechange = function() {
+				//    if (this.readyState == 4 && this.status == 200) {
+				//			      document.getElementById("import csv").innerHTML =
+				//							      this.responseText;
+				//						    }
+				//		  };
+				xhttp.open("GET", "/impExpCompanyQrcode/" + cname , true);
+				//xhttp.setRequestHeader("Content-type", "multipart/form-data")
+				xhttp.send();
+			}
+    </script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+FROM ubuntu:16.04
+#LABEL name="birju"
+#WORKDIR /tmp
+RUN apt-get update && apt-get install -y vim && apt-get install -y sudo && apt-get install -y iputils-ping && apt-get install -y python && apt-get install -y openssh-server && apt-get install -y openssh-client && apt-get install -y python-pip && apt-get install -y python3-pip && apt-get install -y python3-mysqldb && apt-get install -y libmysqlclient-dev && apt-get install -y build-essential && apt-get install -y libssl-dev && apt-get install -y libffi-dev && apt-get install net-tools 
+#RUN apt-get install -y python3-mysqldb && apt-get install -y libmysqlclient-dev && apt-get install -y build-essential
+#RUN apt-get update && apt-get install -y vim && apt-get install -y python
+RUN useradd -d /home/brijesh -g root -G sudo -m -p root123 brijesh
+#RUN useradd -d /home/birju -g root -G sudo -m -p $(echo "pass123" | openssl passwd -1 -stdin) birju
+#USER brijesh
+#RUN mkdir -p project
+WORKDIR /home/brijesh/project
+COPY requirements.txt . 
+RUN pip3 install -r requirements.txt
+COPY djangoServer .
+EXPOSE 8000
+#CMD ["/usr/sbin/sshd", "-D"]
+#CMD ["python3 manage.py runserver 0.0.0.0:8000"]
+#CMD ["python"]

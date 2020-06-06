@@ -1,0 +1,1 @@
+Welcome to Flask’s documentation. This documentation is divided into different parts. I recommend that you get started with Installation and then head over to the Quickstart.

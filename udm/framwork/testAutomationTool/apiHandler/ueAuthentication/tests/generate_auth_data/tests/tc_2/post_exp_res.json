@@ -1,0 +1,13 @@
+{
+  "title": "request parameters didn't validate",
+  "status": 400,
+  "invalidParams": {
+    "servingNetworkName": [
+      "This field is required."
+    ],
+    "ausfInstanceId": [
+      "This field is required."
+    ]
+  },
+  "supportedFeatures": "abc456af"
+}

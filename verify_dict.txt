@@ -1,0 +1,97 @@
+*** setting ***
+
+Documentation   This is some information of test suite
+
+Library     Verify_dict.py
+Library     BuiltIn
+Library     String
+Library     Collections
+
+*** Variable ***
+${a}   dictionary2
+${b}   ngn ekf ekfne efnr rn ejrn
+...   jdwoij brijesh	
+@{c}   ${12}    ${23}   ${45}  
+@{p}   ${12}    ${23}   ${45}  
+...    54    67  
+${key}   e
+${ip}   fc00.1234.3.30
+${stng}   fc00.1234.3.30
+${bool}   Flase
+&{sss}   aa=100   bb=200   cc=300
+...      gg=400   gg=500
+...      ff=600
+&{di}    APN=IMS   
+&{ss}    APN1=APP
+&{dic}   PDN_CONNECTIVITY_REQUEST=&{di}
+*** Keyword ***
+
+***Test Cases ***
+MyTestCase
+
+	&{dic}=    Create Dictionary     PDN_CONNECTIVITY_REQUEST=&{di}  
+	Set To Dictionary   ${dic}   ${ss}
+        Log    ${dic}
+	${dict_output}=    get arg value    ${a}
+        Log    ${False}
+        Log    ${b}
+        Log    ${c}
+        Log    ${dict_output}
+#	${value}=    Get From Dictionary    ${dict_output}    ${key}
+#	${value}=    Get From Dictionary    ${sss}    ${key}
+#	${value}=    Catenate    SEPARATOR=   00    ${value}
+        Set To Dictionary   ${di}   APN1=APP    
+        Set To Dictionary   ${dic}   PDN_CONNECTIVITY_REQUEST=${di}    
+	Log   ${dic}
+#        ${local_link_address}=   set arg value    dictionary2    ${dict_result}
+#        print dict    ${dict_result}
+        ${brijesh}=    Run Keyword If   '${12}' < '${13}'
+        ...      get arg value    ${a} 
+        Log    ${brijesh}
+#        \        ...    Log    {a}
+	Comment     this message from comment
+	:FOR   ${j}   IN    @{p}
+        \	Run Keyword If    ${j} == ${12}    
+	\ 	...	Log   ${j}
+        \	Run Keyword If    ${j} == ${23}    Continue For Loop
+	\ 	Log   ${j}
+
+       	#Run Keyword If    '${key}' == 'e'    
+ 	#...     Fail     test case stop from Fail
+       	${retun}=    Run Keyword If    '${bool}' == 'Flase'    
+ 	...     Get Time 
+        Log    ${retun}
+	${binary}=     Convert To Binary    ${17}
+	Log    ${binary} 
+	${bytes}=     Convert To Bytes     data 
+	Log    ${bytes} 
+	${hex}=     Convert To Hex     0o500 
+	Log    ${hex} 
+	${number}=     Convert To Number     ${100}  
+	Log    ${number} 
+	${count}=     Get Count     apple    p
+	Log    ${count} 
+	${length}=    Get Length     ${ip}
+	Log    ${length}
+        Run Keyword If  '${stng}' == '${ip}'
+        ...   Log   ${ip}
+	#${sub_string}   Get Substring     ${stng}     ${length}    end=None
+        #Log   ${sub_string}
+	${instance}=     Get Library Instance     all=True
+	Log    ${instance} 
+	${time}=     Get Time    epoch
+	Log    ${time} 
+	${val}=     Get Variable Value     ${a}    default=brijesh
+	Log    ${val} 
+	${var}=     Get Variables     
+	Log    ${var} 
+        #Run Keyword And Return If    '${key}' == 'e'   Fail    ${key}
+        ${status}=    Run Keyword And Return Status     Comment    ${key}
+	Repeat Keyword	  2 times    Log    message from repeat keyword
+       	#Return Keyword And Except Error    Error Found    arg1   arg2
+	Run Keywords     Get Time   AND    Comment   run Key
+	#Should Be Equal As Strings     pass    Fail    these are equal        
+
+        [teardown]   Run Keywords     Comment     
+
+

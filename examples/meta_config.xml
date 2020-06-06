@@ -1,0 +1,59 @@
+<metaConfig>
+ <cfgIdInUse>EA863ECC-A2A6-42F3-B18C-FF55CB33BB7E</cfgIdInUse>
+ <cfgId id="84711862-17C2-46AE-A4B3-AAB4070B3703">
+  <name>Verzion1</name>
+  <filePath>Verzion1.xml</filePath>
+ </cfgId>
+ <cfgId id="27AEA082-C688-4EA9-B323-B0298B48B223">
+  <name>VerizonOpretorNew</name>
+  <filePath>VerizonOpretorNew.xml</filePath>
+ </cfgId>
+ <cfgId id="2480FAAF-7410-4454-BEE7-4D38901C4394">
+  <name>CONF26jo</name>
+  <filePath>CONF26jo.xml</filePath>
+ </cfgId>
+ <cfgId id="DCC6B319-0EDC-43C3-AA91-CE2A6A32AE7C">
+  <name>Config26</name>
+  <filePath>Config26.xml</filePath>
+ </cfgId>
+ <cfgId id="79572F69-95E9-4047-B558-46B1E6214954">
+  <name>CONFg1</name>
+  <filePath>CONFg1.xml</filePath>
+ </cfgId>
+ <cfgId id="62FEA1AE4C">
+  <name>NewVerizonOpr2</name>
+  <filePath>NewVerizonOpr2.xml</filePath>
+ </cfgId>
+ <cfgId id="B794A84F-0B06-4CCB-B8BD-F4299D805442">
+  <name>VerzionOperator98</name>
+  <filePath>VerzionOperator98.xml</filePath>
+ </cfgId>
+ <cfgId id="DFB917B9-7ED8-4B5E-905B-D1B19DD08468">
+  <name>VerzionOperator111</name>
+  <filePath>VerzionOperator111.xml</filePath>
+ </cfgId>
+ <cfgId id="A8B851FA-FF8D-46BE-95AB-5BA6601B8EC7">
+  <name>VerzionOperator9845</name>
+  <filePath>VerzionOperator9845.xml</filePath>
+ </cfgId>
+ <cfgId id="4073213C-626F-4E74-A1C2-979574D291B6">
+  <name>VerzionOperator988</name>
+  <filePath>VerzionOperator988.xml</filePath>
+ </cfgId>
+ <cfgId id="C3F1359F-1647-462C-BC09-C11C1939F4AD">
+  <name>VZW</name>
+  <filePath>VZW.xml</filePath>
+ </cfgId>
+ <cfgId id="C8E41A2A-CD0F-40EF-A9AD-F613F2C7C743">
+  <name>VerzionOprtr2</name>
+  <filePath>VerzionOprtr2.xml</filePath>
+ </cfgId>
+ <cfgId id="7E179055-80E5-4F3D-B718-BD0A26727DB0">
+  <name>VerizonOp</name>
+  <filePath>VerizonOp.xml</filePath>
+ </cfgId>
+ <cfgId id="EA863ECC-A2A6-42F3-B18C-FF55CB33BB7E">
+  <name>VerizonOp1</name>
+  <filePath>VerizonOp1.xml</filePath>
+ </cfgId>
+</metaConfig>

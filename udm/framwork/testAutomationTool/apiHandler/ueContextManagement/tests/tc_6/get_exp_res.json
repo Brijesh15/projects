@@ -1,0 +1,10 @@
+{
+  "title": "amf3gpp parameters didn't validate",
+  "status": 502,
+  "invalidParams": {
+    "amfInstanceId": [
+      "This field is required."
+    ]
+  },
+  "supportedFeatures": ""
+}

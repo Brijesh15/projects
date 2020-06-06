@@ -1,0 +1,8 @@
+systemConfigurationin:
+    udr:
+        ip: "127.0.0.1"
+        port: "8005"
+
+
+isUtRun: true
+

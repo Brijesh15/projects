@@ -1,0 +1,78 @@
+<subscriber0>
+   	        <!-- IMSI digits should be always 15 -->
+		<imsiNoDigits>15</imsiNoDigits>
+		<imsi>001010123456808</imsi>
+		<opNumDigits>16</opNumDigits>
+		<op>000102030405060708090A0B0C0D0E0F</op>
+		<amf>8000</amf>
+		<!-- Use 0 for Test Algorithm and 1 for Milenage Algorithm -->
+		<algotype>1</algotype>
+		<kNumDigits>16</kNumDigits>
+		<kvalue>0123456789abcdef</kvalue>
+		<ueDlAmbrBps>100000000</ueDlAmbrBps>
+		<ueUlAmbrBps>20000000</ueUlAmbrBps>
+		<apnConfig>
+			<!-- Specify the number of APN for subscriber, Maximum number of APN = 4 -->
+		        <numApn>4</numApn>
+		        <apnNum1>
+				<!-- Specify the length of APN name. Maximum length is 30 -->
+		                <apnNameLength>7</apnNameLength>
+		                <apnName>VZWIMS</apnName>
+				<!-- Specify the QCI. Range is from 1 to 9 -->
+		                <apnQci>9</apnQci>
+				<!-- Specify the APN DL ambr -->
+		                <apnDlAmbr>100000000</apnDlAmbr>
+				<!-- Specify the APN UL ambr -->
+				<apnUlAmbr>20000000</apnUlAmbr>	
+				<!-- Specify the APN DL mbr -->
+				<apnDlMbr>500000</apnDlMbr>
+				<!-- Specify the APN UL mbr -->
+				<apnUlMbr>500000</apnUlMbr>
+		        </apnNum1>
+		        <apnNum2>
+				<!-- Specify the length of APN name. Maximum length is 30 -->
+		                <apnNameLength>7</apnNameLength>
+		                <apnName>VZWIMS</apnName>
+				<!-- Specify the QCI. Range is from 1 to 9 -->
+		                <apnQci>9</apnQci>
+				<!-- Specify the APN DL ambr -->
+			        <apnDlAmbr>100000000</apnDlAmbr>
+				<!-- Specify the APN UL ambr -->
+				<apnUlAmbr>20000000</apnUlAmbr>	                
+				<!-- Specify the APN DL mbr -->
+				<apnDlMbr>500000</apnDlMbr>
+				<!-- Specify the APN UL mbr -->
+				<apnUlMbr>500000</apnUlMbr>
+		        </apnNum2>
+		        <apnNum3>
+				<!-- Specify the length of APN name. Maximum length is 30 -->
+		                <apnNameLength>7</apnNameLength>
+		                <apnName>VZWIMS</apnName>
+				<!-- Specify the QCI. Range is from 1 to 9 -->
+		                <apnQci>9</apnQci>
+				<!-- Specify the APN DL ambr -->
+		                <apnDlAmbr>100000000</apnDlAmbr>
+				<!-- Specify the APN UL ambr -->
+				<apnUlAmbr>20000000</apnUlAmbr>
+				<!-- Specify the APN DL mbr -->
+				<apnDlMbr>500000</apnDlMbr>
+				<!-- Specify the APN UL mbr -->
+				<apnUlMbr>500000</apnUlMbr>
+		        </apnNum3>
+		        <apnNum4>
+				<!-- Specify the length of APN name. Maximum length is 30 -->
+		                <apnNameLength>7</apnNameLength>
+		                <apnName>VZWIMS</apnName>
+				<!-- Specify the QCI. Range is from 1 to 9 -->
+		                <apnQci>9</apnQci>
+				<!-- Specify the APN DL ambr -->
+		                <apnDlAmbr>100000000</apnDlAmbr>
+				<!-- Specify the APN UL ambr -->
+				<apnUlAmbr>20000000</apnUlAmbr>
+				<!-- Specify the APN DL mbr -->
+				<apnDlMbr>500000</apnDlMbr>
+				<!-- Specify the APN UL mbr -->
+				<apnUlMbr>500000</apnUlMbr>
+		        </apnNum4>
+		</apnConfig>
+	    </subscriber0>

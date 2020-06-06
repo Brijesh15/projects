@@ -1,0 +1,10 @@
+{
+	"supportedFeatures":"abc456af",
+	"servingNetworkName": "5G:mnc480.mcc311.3gppnetwork.org",
+	"resynchronizationInfo": {
+		"rand": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"auts": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		 },
+		  "ausfInstanceId":"d2ba57b8-70fb-11ea-9a57-b0c090b6cc6d"
+}
+

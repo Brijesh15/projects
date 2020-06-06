@@ -1,0 +1,10 @@
+{
+  "title": "auth events parameters didn't validate",
+  "status": 400,
+  "invalidParams": {
+    "authType": [
+      "This field is required."
+    ]
+  },
+  "supportedFeatures": ""
+}

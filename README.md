@@ -1,1 +1,2 @@
-# projects
+# github
+This is for learning purpose.

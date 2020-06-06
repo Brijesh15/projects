@@ -1,0 +1,465 @@
+<?xml version="1.0" ?>
+<enbconfig>
+ <node config="1">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>184</pci_val>
+  <cellId>137511460</cellId>
+  <rf-block>0</rf-block>
+  <secondaryCell>None</secondaryCell>
+  <ip>172.16.0.124</ip>
+  <primaryCell>None</primaryCell>
+ </node>
+ <node config="84711862-17C2-46AE-A4B3-AAB4070B3703">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="873C8C2E-DFD9-4BE5-865E-91D67EEE0B6C">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"310410", "0", "0", "0", "0", "0" }</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>0002</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>13242332</cellId>
+ </node>
+ <node config="9E2A1F63-3182-4D18-8FAF-93EFE5AD75F3">
+  <Id>3</Id>
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"00101", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>0002</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="77B0355D-EFAD-4124-8C91-C8324D77090C">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id>00101</plmn_id>
+  <cellId>137511460</cellId>
+  <txpower>10</txpower>
+  <bandwidth>20</bandwidth>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <ta_code>1</ta_code>
+  <pci_val>175</pci_val>
+ </node>
+ <node config="B22C67E9-02A0-4754-ABA5-F1BA2E66DC64">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311479", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>0001</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="2480FAAF-7410-4454-BEE7-4D38901C4394">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>001</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="DCC6B319-0EDC-43C3-AA91-CE2A6A32AE7C">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>001</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="79572F69-95E9-4047-B558-46B1E6214954">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>001</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="B24EDAAE-A03A-40EA-B7E7-9862FEA1AE4C">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>001</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="B794A84F-0B06-4CCB-B8BD-F4299D805442">
+  <ul_earfcn>1725000</ul_earfcn>
+  <dl_earfcn>2125000</dl_earfcn>
+  <plmn_id_lst>311480</plmn_id_lst>
+  <tx_power_mimo>3</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>2</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>3</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>185</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="DFB917B9-7ED8-4B5E-905B-D1B19DD08468">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="A8B851FA-FF8D-46BE-95AB-5BA6601B8EC7">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="4073213C-626F-4E74-A1C2-979574D291B6">
+  <ul_earfcn>20100</ul_earfcn>
+  <dl_earfcn>2100</dl_earfcn>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <enb_type>GEN2</enb_type>
+  <bandwidth>20</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <pci_val>175</pci_val>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="C3F1359F-1647-462C-BC09-C11C1939F4AD">
+  <ul_earfcn>1725000</ul_earfcn>
+  <pci_val>185</pci_val>
+  <plmn_id_lst>311480</plmn_id_lst>
+  <tx_power_mimo>5</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>3</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>5</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2125000</dl_earfcn>
+  <enb_type>GEN2</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="C8E41A2A-CD0F-40EF-A9AD-F613F2C7C743">
+  <rf-block>0</rf-block>
+  <ul_earfcn>23180</ul_earfcn>
+  <pci_val>185</pci_val>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <tx_power_mimo>5</tx_power_mimo>
+  <freq_band_ind>13</freq_band_ind>
+  <bandwidth>5</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>5</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>5180</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="443CC15A-DE7B-40D5-8925-487CE94C4319">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="FBAC4D9C-4DF3-4450-BF38-13D796358F21">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="7B6572CD-8C9C-417C-A123-5763A9E7577B">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="E1595DE4-B10F-4FE5-B2A1-25CFB8895720">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="F2DCA91F-F878-4807-AB49-3E1131B85245">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="8783DCA7-F2ED-44E5-AB18-F3AE94D33469">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="A901EB7C-3FB1-4D22-8920-3FB34A62D7AF">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="FA885247-1C81-47F7-B1F4-E64414A65BBD">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="503E694E-3E29-42DA-8BEA-52C17EA775B1">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="23CB71F5-E453-43F8-9078-5A1CCE1822F3">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="2C51B356-16B8-4736-87DA-C25E1B0C53F1">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="DD264194-E247-4C76-91FD-08ABC7E81610">
+  <rf-block>0</rf-block>
+  <ul_earfcn>20100</ul_earfcn>
+  <pci_val>184</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>{"311480", "0", "0", "0", "0", "0"}</plmn_id_lst>
+  <ip>192.168.4.174</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>10</tx_power_mimo>
+  <freq_band_ind>4</freq_band_ind>
+  <bandwidth>10</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>10</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>2100</dl_earfcn>
+  <enb_type>GEN1</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+ <node config="EA863ECC-A2A6-42F3-B18C-FF55CB33BB7E">
+  <rf-block>0</rf-block>
+  <ul_earfcn>779500</ul_earfcn>
+  <pci_val>195</pci_val>
+  <secondaryCell>None</secondaryCell>
+  <plmn_id_lst>311480</plmn_id_lst>
+  <ip>192.168.4.175</ip>
+  <primaryCell>None</primaryCell>
+  <tx_power_mimo>5</tx_power_mimo>
+  <freq_band_ind>13</freq_band_ind>
+  <bandwidth>2</bandwidth>
+  <no_of_brdcst_plmn>1</no_of_brdcst_plmn>
+  <tx_power_main>5</tx_power_main>
+  <ta_code>1</ta_code>
+  <dl_earfcn>748500</dl_earfcn>
+  <enb_type>GEN2</enb_type>
+  <cellId>137511460</cellId>
+ </node>
+</enbconfig>

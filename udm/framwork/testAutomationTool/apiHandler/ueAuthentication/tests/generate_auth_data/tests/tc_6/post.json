@@ -1,0 +1,9 @@
+{
+	"supportedFeatures":"abc456af",
+	"servingNetworkName": "",
+	"resynchronizationInfo": {
+		"rand": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"auts": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		 },
+		  "ausfInstanceId":""
+}

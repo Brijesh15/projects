@@ -1,0 +1,19 @@
+version: '3'
+
+services:  
+  db:
+    image: mysql:8.0
+    #restart: always
+    container_name: birjuMysql
+    environment:
+      - MYSQL_DATABASE="dockerDB"
+      - MYSQL_USER="brijesh"
+      - MYSQL_PASSWORD="brijesh@123" 
+      - MYSQL_ROOT_PASSWORD="root@123" 
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    ports:
+      - "3300:3306"
+    volumes:
+      - /home/brijesh/dockerpro/project1/my_vol:/var/lib/mysql  
+      #- /home/brijesh/dockerpro/mysql:/var/lib/mysql  
+

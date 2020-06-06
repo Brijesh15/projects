@@ -1,0 +1,10 @@
+{
+  "title": "Access and Mobilit data didn't validate",
+  "status": 502,
+  "invalidParams": {
+    "forbiddenAreas": [
+      "This field is required."
+    ]
+  },
+  "supportedFeatures": ""
+}

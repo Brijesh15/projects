@@ -1,0 +1,10 @@
+{
+  "title": "amf3gpp parameters didn't validate",
+  "status": 502,
+  "invalidParams": {
+    "deregCallbackUri": [
+      "This field is required."
+    ]
+  },
+  "supportedFeatures": ""
+}

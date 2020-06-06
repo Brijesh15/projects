@@ -1,0 +1,429 @@
+multiprocessing:
+   It is used to span a child process when we need any parallel activities with the main process.When we have quad core processor then we can   run at most 4 process at a time. 
+ Example:
+
+ from multiprocessing import Process
+ 
+ 
+def square(x):
+ 
+    for x in numbers:
+        print('%s squared  is  %s' % (x, x**2))
+ 
+if __name__ == '__main__':
+    numbers = [43, 50, 5, 98, 34, 35]
+ 
+    p = Process(target=square, args=('x',))
+    p.start()
+    p.join
+    print "Done"
+
+start() -> start the new process.
+run() -> it will just run target function like normal function. run does not create a new process
+join(timeout) -> wait for the process to complete when no timeout is given or timeout is None. otherwise wait for given timeout. 
+
+Queue()
+   it is used to shared the data between processes
+    q = multiprocessing.Queue() -> create a queue object     
+    q.put(n)  -> put the data in queue
+    q.get()  -> get data from queue
+
+Pipes()
+    Pipes in multiprocessing are primarily used for communication between processes.
+    parent_conn, child_conn = Pipe() > one object for send data and another for recieve tha data
+    child_conn.send(['hello world'])
+    parent_conn.recv()
+
+Lock:
+    Locks are perhaps the simplest synchronization primitives in Python. A Lock has only two states — locked and (surprise) unlocked. It is created in the unlocked state and has two principal methods — acquire() and release(). The acquire() method locks the Lock and blocks execution until the release() method in some other coroutine sets it to unlocked. Then it locks the Lock again and returns True. The release() method should only be called in the locked state, it sets the state to unlocked and returns immediately. If release() is called in the unlocked state, a RunTimeError is raised.
+
+Note: Only one process can acquire the lock and same process or any other process can release the lock and again acquire by same process or any other process.
+
+RLock:
+    The standard Lock does not know which thread is currently holding the lock. If the lock is held, any thread that attempts to acquire it will block, even if the same thread itself is already holding the lock.In such cases, RLock (re-entrant lock) is used. 
+
+Note:  Same process can acquire the lock many times but not any other process and we need to release the lock same number of times as often as acquired.
+
+BoundedSemaphore:
+   Semaphores are simply advanced counters. An acquire() call to a semaphore will block only after a number of threads have acquire()ed it. The associated counter decreases per acquire() call, and increases per release() call. A ValueError will occur if release() calls try to increment the counter beyond its assigned maximum value (which is the number of threads that can acquire() the semaphore before blocking occurs).
+
+Note: Same process or any other process can acquire the lock and release the lock in maximum given counter. If the counter is 2 then 2 process(same or different) can acquire the lock at a time, third one will wait untill one of those process release the lock. 
+
+Example:
+
+from multiprocessing import Process, RLock, BoundedSemaphore
+import os, time
+
+def brijesh(arg):
+        print "waiting for releasing lock"
+        l.acquire()
+        print arg
+        print 'module_name:',__name__
+        if hasattr(os,'getppid'):
+                print "parent process:",os.getppid()
+        print 'Process id:',os.getpid()
+        l.release()
+
+def HI(name,l):
+        #brijesh('function Hi')
+        print "waiting for acquiring lock1"
+        l.acquire()
+        brijesh('function Hi')
+        print 'Hi starting'
+        print "parent process:",os.getppid()
+        print 'Process id:',os.getpid()
+        start = time.time()
+        #time.sleep(5)
+        while (time.time() - start) < 0.01:
+            print 'Hello',name
+        l.release()
+
+if __name__ == '__main__':
+        #brijesh('main line1')
+        #HI('main line2')
+        l = BoundedSemaphore(2)
+        #l = RLock()
+        p=Process(target=HI, args=('bob',l,))
+        p1=Process(target=HI, args=('Brijesh chaudhary',l,))
+        p.start()
+        print "waiting for acquiring lock2"
+        l.acquire()
+        time.sleep(2)
+        l.release()
+        #p.join()       
+        #brijesh('main line1')
+
+Python file Extension:
+
+.py  -> This is normally the input source code that you've written.
+
+.pyc -> This is the compiled bytecode. If you compile a python *.py script and if you import a module, python will built a *.pyc file that contains the bytecode to make importing it again taler easier (and fast) 
+
+.pyo -> This is a *.pyc file that was created while optimizations (-o) was on. When the Python interpreter is invoked with the -O flag, optimized code is generated and stored in *.pyo files. when -O is used, all bytecode is optimized; .pyc files are ignored and .py files are compiled to optimized bytecode. Passing two -O flags to the Python interpreter (-OO) will cause the bytecode compile to perform optimizations that could in some rare cases result in malfunctioning programs. Currently only __doc__ string are removed from the bytecode, resulting in more compact *.pyo files.
+
+.pyw -> Python script to run in Windowed mode, without a console; executed with pythonw.exe . 
+     
+Thread:
+   In simple words, a thread is a sequence of such instructions within a program that can be executed independently of other code. For simplicity, you can assume that a thread is simply a subset of a process!
+
+Multithreading: 
+   Multithreading is defined as the ability of a processor to execute multiple threads concurrently.
+
+  In a simple, single-core CPU, it is achieved using frequent switching between threads. This is termed as context switching. In context switching, the state of a thread is saved and state of another thread is loaded whenever any interrupt (due to I/O or manually set) takes place. Context switching takes place so frequently that all the threads appear to be running parallely (this is termed as multitasking)
+
+Example:
+
+import threading 
+import os 
+  
+def task1(): 
+    print("Task 1 assigned to thread: {}".format(threading.current_thread().name)) 
+    print("ID of process running task 1: {}".format(os.getpid())) 
+  
+def task2(): 
+    print("Task 2 assigned to thread: {}".format(threading.current_thread().name)) 
+    print("ID of process running task 2: {}".format(os.getpid())) 
+  
+if __name__ == "__main__": 
+  
+    # print ID of current process 
+    print("ID of process running main program: {}".format(os.getpid())) 
+  
+    # print name of main thread 
+    print("Main thread name: {}".format(threading.main_thread().name)) 
+  
+    # creating threads 
+    t1 = threading.Thread(target=task1, name='t1') 
+    t2 = threading.Thread(target=task2, name='t2')   
+  
+    # starting threads 
+    t1.start() 
+    t2.start() 
+  
+    # wait until all threads finish 
+    t1.join() 
+    t2.join() 
+
+output:
+
+ID of process running main program: 11758
+Main thread name: MainThread
+Task 1 assigned to thread: t1
+ID of process running task 1: 11758
+Task 2 assigned to thread: t2
+ID of process running task 2: 11758
+
+Let us try to understand the above code:
+
+We use os.getpid() function to get ID of current process.
+print("ID of process running main program: {}".format(os.getpid()))
+
+As it is clear from the output, the process ID remains same for all threads.
+We use threading.main_thread() function to get the main thread object. In normal conditions, the main thread is the thread from which the Python interpreter was started. name attribute of thread object is used to get the name of thread.
+print("Main thread name: {}".format(threading.main_thread().name))
+
+We use the threading.current_thread() function to get the current thread object.
+print("Task 1 assigned to thread: {}".format(threading.current_thread().name))
+
+Python Comprehensions:
+
+   Comprehensions in Python provide us with a short and concise way to construct new sequences (such as lists, set, dictionary etc.) using sequences which have been already defined.
+
+List Comprehensions:
+
+   List Comprehensions provide an elegant way to create new lists. The following is the basic structure of a list comprehension:   
+Syntax:
+   output_list = [output_exp for var in input_list if (var satisfies this condition)]
+
+Note:
+   Note that list comprehension may or may not contain an if condition. List comprehensions can contain multiple for (nested list comprehensions).
+
+Example:
+input_list = [1, 2, 3, 4, 4, 5, 6, 7, 7] 
+    
+list_using_comp = [var for var in input_list if var % 2 == 0]
+
+Output List using list comprehensions: [2, 4, 4, 6]
+
+Dictionary Comprehensions:
+
+Extending the idea of list comprehensions, we can also create a dictionary using dictionary comprehensions. The basic structure of a dictionary comprehension looks like below.
+
+Syntax:
+
+output_dict = {key:value for (key, value) in iterable if (key, value satisfy this condition)}
+
+Example:
+
+input_list = [1,2,3,4,5,6,7]
+dict_using_comp = {var:var ** 3 for var in input_list if var % 2 != 0} 
+Output Dictionary using dictionary comprehensions: {1: 1, 3: 27, 5: 125, 7: 343}
+
+Set Comprehensions:
+
+Set comprehensions are pretty similar to list comprehensions. The only difference between them is that set comprehensions use curly brackets { }.
+
+Syntax:
+
+input_list = [1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 7]   
+set_using_comp = {var for var in input_list if var % 2 == 0} 
+Output Set using set comprehensions: {2, 4, 6}
+
+Generator Comprehensions:
+
+Generator Comprehensions are very similar to list comprehensions. One difference between them is that generator comprehensions use circular brackets whereas list comprehensions use square brackets. The major difference between them is that generators don’t allocate memory for the whole list. Instead, they generate each value one by one which is why they are memory efficient.
+
+input_list = [1, 2, 3, 4, 4, 5, 6, 7, 7]   
+output_gen = (var for var in input_list if var % 2 == 0)
+Output values using generator comprehensions: 2 4 4 6
+
+Lambda Function:
+
+   In Python, anonymous function means that a function is without a name and the lambda keyword is used to create anonymous functions.
+Syntax:
+
+lambda arguments: expression
+
+Example:
+g = lambda x: x*x*x 
+print(g(7))
+
+Filter function:
+  The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+
+syntax:
+
+filter(function, sequence)
+
+Parameters:
+  function: function that tests if each element of a sequence true or not.
+  sequence: sequence which needs to be filtered, it can be sets, lists, tuples, or containers of any iterators.
+  Retruns: returns an iterator that is already filtered.
+Example:
+
+def fun(variable): 
+    letters = ['a', 'e', 'i', 'o', 'u'] 
+    if (variable in letters): 
+        return True
+    else: 
+        return False
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+filtered = filter(fun, sequence)
+for s in filtered: 
+    print(s)
+
+Output:
+The filtered letters are:
+e
+e
+
+Applications:
+It is normally used with Lambda functions to separate list, tuple, or sets.
+seq = [0, 1, 2, 3, 5, 8, 13] 
+# result contains odd numbers of the list 
+result = filter(lambda x: x % 2, seq) 
+print(list(result))
+# result contains even numbers of the list 
+result = filter(lambda x: x % 2 == 0, seq) 
+print(list(result)) 
+output:
+[1, 3, 5, 13]
+[0, 2, 8]
+
+Map Function:
+
+The map() function in Python takes in a function and a list as argument. The function is called with a lambda function and a list and a new list is returned which contains all the lambda or any function modified items returned by that function for each item.
+
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61] 
+final_list = list(map(lambda x: x*2 , li)) 
+print(final_list) 
+output:
+[10, 14, 44, 194, 108, 124, 154, 46, 146, 122]
+
+reduce Function:
+
+The reduce() function in Python takes in a function and a list as argument. The function is called with a lambda function or any function and a list and a new reduced result is returned. This performs a repetitive operation over the pairs of the list. This is a part of functools module.
+
+from functools import reduce
+li = [5, 8, 10, 20, 50, 100] 
+sum = reduce((lambda x, y: x + y), li) 
+print (sum) 
+Output:
+193
+Note:
+Here the results of previous two elements are added to the next element and this goes on till the end of the list like (((((5+8)+10)+20)+50)+100)
+
+Zip Function:
+   The purpose of zip() is to map the similar index of multiple containers so that they can be used just using as single entity.
+
+Example:
+   name = [ "Manjeet", "Nikhil", "Shambhavi", "Astha" ] 
+   roll_no = [ 4, 1, 3, 2 ] 
+   marks = [ 40, 50, 60, 70 ] 
+   mapped = zip(name, roll_no, marks)
+output:
+  [('Shambhavi', 3, 60), ('Astha', 2, 70),('Manjeet', 4, 40), ('Nikhil', 1, 50)]
+
+Socket Programming:
+     Socket programming is a way of connecting two nodes on a network to communicate with each other. One socket(node) listens on a particular port at an IP, while other socket reaches out to the other to form a connection. Server forms the listener socket while client reaches out to the server.
+
+creating socket:
+  s = socket.socket (socket_family, socket_type, protocol=0)
+
+> socket_family − This is either AF_UNIX or AF_INET, as explained earlier.
+> socket_type − This is either SOCK_STREAM or SOCK_DGRAM.
+> protocol − This is usually left out, defaulting to 0 
+
+A simple server-client program :
+
+Server :
+A server has a bind() method which binds it to a specific ip and port so that it can listen to incoming requests on that ip and port.A server has a listen() method which puts the server into listen mode. This allows the server to listen to incoming connections. And last a server has an accept() and close() method. The accept method initiates a connection with the client and the close method closes the connection with the client.
+
+# first of all import the socket library 
+import socket                
+  
+# next create a socket object 
+s = socket.socket()          
+print "Socket successfully created"
+  
+# reserve a port on your computer in our 
+# case it is 12345 but it can be anything 
+port = 12345                
+  
+# Next bind to the port 
+# we have not typed any ip in the ip field
+# instead we have inputted an empty string(INADDR_ANY)
+# this makes the server listen to requests  
+# coming from other computers on the network 
+
+#s.bind((hostname, port))
+#A string, which can be a host name, a dotted-quad address, or an IPV6 address in colon (and possibly dot) notation
+#A string "<broadcast>", which specifies an INADDR_BROADCAST address.
+#A zero-length string, which specifies INADDR_ANY, or
+#An Integer, interpreted as a binary address in host byte order.	
+
+s.bind(('', port))         
+print "socket binded to %s" %(port) 
+  
+# put the socket into listening mode 
+s.listen(5)      
+print "socket is listening"            
+  
+# a forever loop until we interrupt it or  
+# an error occurs 
+while True: 
+  
+   # Establish connection with client. 
+   c, addr = s.accept()      
+   print 'Got connection from', addr 
+  
+   # send a thank you message to the client.  
+   c.send('Thank you for connecting') 
+  
+   # Close the connection with the client 
+   c.close() 
+
+First of all we import socket which is necessary.
+> Then we made a socket object and reserved a port on our pc.
+> After that we binded our server to the specified port. Passing an empty string means that the server can listen to incoming connections from other computers as well. If we would have passed 127.0.0.1 then it would have listened to only those calls made within the local computer.
+> After that we put the server into listen mode.5 here means that 5 connections are kept waiting if the server is busy and if a 6th socket trys to connect then the connection is refused.
+> At last we make a while loop and start to accept all incoming connections and close those connections after a thank you message to all connected sockets.
+
+Client :
+
+# Import socket module 
+import socket                
+  
+# Create a socket object 
+s = socket.socket()          
+  
+# Define the port on which you want to connect 
+port = 12345                
+  
+# connect to the server on local computer 
+s.connect(('127.0.0.1', port)) 
+  
+# receive data from the server 
+print s.recv(1024) 
+# close the connection 
+s.close()        
+First of all we make a socket object.
+Then we connect to localhost on port 12345 (the port on which our server runs) and lastly we receive data from the server and close the connection.
+Now save this file as client.py and run it from the terminal after starting the server script.
+
+Few methods:
+
+1.
+s.recv()
+This method receives TCP message
+2	
+s.send()
+This method transmits TCP message
+3	
+s.recvfrom()
+This method receives UDP message
+4	
+s.sendto()
+This method transmits UDP message
+5	
+s.close()
+This method closes socket
+6	
+socket.gethostname()
+Returns the hostname. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
