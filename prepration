@@ -456,10 +456,44 @@ Redis Server:
 
 
 
+SQL Query
+Oder By and Group By
+
+SELECT COUNT(CustomerID), Country FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+
+IN 
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+
+Between
+
+select * from products where price between 10 and 20;
+
+Inner join
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+Left Join
+
+seccond highest selary
+SELECT OrderID FROM [Orders] Order By OrderID desc limit 1,1
+
+if multiple employee have same salary
+SELECT * FROM employee 
+WHERE salary= (SELECT DISTINCT(salary) 
+FROM employee ORDER BY salary LIMIT n-1,1);
 
 
+duplicates value in table
+on the basis of one column
 
+SELECT OrderID, COUNT(OrderID) FROM Orders GROUP BY OrderID HAVING COUNT(OrderID)>1
 
+multiple columns
+select OrderID, ProductID count(*) from OderTable group by OrderID, ProductID having count(*)>1
 
 
 

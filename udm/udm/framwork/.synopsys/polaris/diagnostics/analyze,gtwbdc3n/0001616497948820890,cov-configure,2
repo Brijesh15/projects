@@ -1,0 +1,2 @@
+[WARNING] Configuration already exists for file regex ^.*\.(js|xsjs|xsjslib|map)$
+          and it will not be updated.

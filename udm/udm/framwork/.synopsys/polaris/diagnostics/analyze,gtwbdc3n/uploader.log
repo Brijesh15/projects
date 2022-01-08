@@ -1,0 +1,13 @@
+
+
+Upload Log - Coverity
+--------------------------
+[INFO] [gtwbdc3n] Initiating resumable file upload
+[INFO] [gtwbdc3n] Request started : /ikea-uploads-bucket/urn:x-swip:organizations:93mf6p9quh55t822anvch0suo8/6793103b-7b3c-4b82-acf9-bc19da90fda6
+[INFO] [gtwbdc3n] Request completed with status code : 201 
+[INFO] [gtwbdc3n] File upload location : https://storage.googleapis.com/ikea-uploads-bucket/urn%3Ax-swip%3Aorganizations%3A93mf6p9quh55t822anvch0suo8/6793103b-7b3c-4b82-acf9-bc19da90fda6?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=ikea-jobs-service%40snps-swip-production.iam.gserviceaccount.com%2F20210323%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210323T111352Z&X-Goog-Expires=10799&X-Goog-Signature=a788a359bbcbb8f585c17df4df5a793351ce4ed57dd7702c85f7655961ef58389fbbfeaefb35b154c55718bf6338f50cac4e81af526f662aa4b90cd16a275b7fb8c01999c7f26bd68d2efa7b7983cae09343b42330ffc23c9168974c03345d6340e7f54099349503bcf1d4fa49f71519c9ea187217fae37d3487d5bfa48705e182c1dfbebb37629547d1bc2f2b0e121e63a827ab41ee9524534fc8d5441ab8512233918b6522f5607e332e12b826400303af4f723d059ec1b7cc328aabbf836220f4bbab6466132f29790360bd274c3b40e515867314d66be3f395127999b80e57f4bdc71bc45a6dd5745224a3d0f501e04f18008c4185a1c0f2c92729b92e73&X-Goog-SignedHeaders=host%3Bx-goog-content-length-range%3Bx-goog-resumable&upload_id=ABg5-UxH3dDXcE8Wnni6NAiRt232-fj2mTjC3arereiJ6cIJXep6-XHO7xTgjuXu1FEqxkJhLhc5zgLzZsK38V18NmA
+[INFO] [gtwbdc3n] File size in bytes : 391042 
+[INFO] [gtwbdc3n] File upload started
+[INFO] [gtwbdc3n] Request started : /ikea-uploads-bucket/urn:x-swip:organizations:93mf6p9quh55t822anvch0suo8/6793103b-7b3c-4b82-acf9-bc19da90fda6
+[INFO] [gtwbdc3n] Request completed with status code : 200 
+[INFO] [gtwbdc3n] File upload completed

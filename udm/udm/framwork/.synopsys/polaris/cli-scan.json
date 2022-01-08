@@ -1,0 +1,36 @@
+{
+  "version": "2.0",
+  "scanInfo": {
+    "cliVersion": "1.13.25",
+    "scanTime": "2021-03-23T11:13:41Z",
+    "issueApiUrl": "https://ikea.polaris.synopsys.com/api/query/v0/roll-up-counts?branch-id=aff0bb96-c243-4936-9067-446eb744f1e7&filter%5Bissue%5D%5Bstatus%5D%5B%24eq%5D=opened&for-child-paths=false&group-by=%5Bissue%5D%5Btaxonomy%5D%5Bid%5D%5Be03f7618-831f-4e4c-8145-54a2ed1d35d6%5D&include%5Bissue%5D%5B%5D=severity&page%5Blimit%5D=25&page%5Boffset%5D=0&project-id=e35b8429-870b-4aef-998c-a264870e1dab"
+  },
+  "projectInfo": {
+    "projectId": "e35b8429-870b-4aef-998c-a264870e1dab",
+    "branchId": "aff0bb96-c243-4936-9067-446eb744f1e7",
+    "revisionId": "286a1730-2424-4953-a943-0706a04148c6"
+  },
+  "tools": [
+    {
+      "toolName": "Coverity",
+      "toolVersion": "2021.01-1",
+      "jobId": "isvet9mslt7npd4g1gi421hlbs",
+      "jobStatusUrl": "https://ikea.polaris.synopsys.com/api/jobs/jobs/isvet9mslt7npd4g1gi421hlbs",
+      "jobStatus": "COMPLETED",
+      "issueApiUrl": "https://ikea.polaris.synopsys.com/api/query/v0/roll-up-counts?branch-id=aff0bb96-c243-4936-9067-446eb744f1e7&filter%5Bissue%5D%5Bstatus%5D%5B%24eq%5D=opened&filter%5Bissue%5D%5Btool%5D%5Bid%5D%5B%24eq%5D=aa0fb4be-17dd-48da-b546-abcf1783aa58&for-child-paths=false&group-by=%5Bissue%5D%5Btaxonomy%5D%5Bid%5D%5Be03f7618-831f-4e4c-8145-54a2ed1d35d6%5D&include%5Bissue%5D%5B%5D=severity&page%5Blimit%5D=25&page%5Boffset%5D=0&project-id=e35b8429-870b-4aef-998c-a264870e1dab"
+    }
+  ],
+  "issueSummary": {
+    "issuesBySeverity": {
+      "critical": 0,
+      "high": 2,
+      "medium": 0,
+      "low": 1,
+      "audit": 5
+    },
+    "total": 8,
+    "newIssues": 8,
+    "closedIssues": 0,
+    "summaryUrl": "https://ikea.polaris.synopsys.com/projects/e35b8429-870b-4aef-998c-a264870e1dab/branches/aff0bb96-c243-4936-9067-446eb744f1e7"
+  }
+}

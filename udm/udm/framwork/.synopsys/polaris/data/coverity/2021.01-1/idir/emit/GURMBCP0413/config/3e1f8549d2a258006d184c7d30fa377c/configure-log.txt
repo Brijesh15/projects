@@ -1,0 +1,8 @@
+Native Compiler invocation: ./ --coverity_resp_file=C:\Users\4014218\AppData\Local\Temp\cov-4014218\db41eec1006ee678cffabcf1f42b2e27\fs-capture-resp-file6
+Working directory: C:\Users\4014218\Desktop\udm\framwork
+Comptype: python
+* Configuring Python Filesystem Capture
+Checking for 'mount' command
+Checking for Cygwin registry keys
+           * HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Cygnus Solutions\Cygwin
+           * HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Cygnus Solutions\Cygwin

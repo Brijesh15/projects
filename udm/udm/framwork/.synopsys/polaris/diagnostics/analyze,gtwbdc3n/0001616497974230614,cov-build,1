@@ -1,0 +1,12 @@
+Coverity Build Capture (64-bit) version 2021.01-1 on Windows 10 Professional, 64-bit (build 19041)
+Internal version numbers: 5f2abde9cd p-2021.01-push-155
+
+[STATUS] Running filesystem capture matching against 121 listed files...
+[STATUS] Emitting 121 files from filesystem capture
+|0----------25-----------50----------75---------100|
+****************************************************
+Emitted 23 Python compilation units (100%) successfully
+
+23 Python compilation units (100%) are ready for analysis
+The cov-build utility completed successfully.
+

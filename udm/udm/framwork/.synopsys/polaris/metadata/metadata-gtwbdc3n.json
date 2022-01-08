@@ -1,0 +1,26 @@
+{
+ "platform": "win64",
+ "name": "Coverity",
+ "version": "2021.01-1",
+ "toolMeta": {
+  "captureSize": 1145182,
+  "sourceLanguages": [
+   "Text data",
+   "Python 3"
+  ],
+  "sourceLanguageSize": {
+   "Python 3": 51346,
+   "Text data": 2250407
+  },
+  "cliUsageTime": {
+   "initialize": 26986,
+   "setup": 1599,
+   "configure": 3499,
+   "install": 2640,
+   "capture": 73993,
+   "prepare": 856,
+   "total": 109573
+  },
+  "stripPath": "C:\\Users\\4014218\\Desktop\\udm\\framwork"
+ }
+}

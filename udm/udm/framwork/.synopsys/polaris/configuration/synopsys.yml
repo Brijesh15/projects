@@ -1,0 +1,49 @@
+version: "1"
+project:
+  organization: ikea
+  name: framwork
+  branch: framwork
+  revision:
+    name: framwork
+    date: "2021-03-23T11:12:20Z"
+  projectDir: C:\Users\4014218\Desktop\udm\framwork
+  captureDir: C:\Users\4014218\Desktop\udm\framwork\.synopsys\polaris
+capture:
+  fileSystem:
+    ears:
+      extensions: [ear]
+      files:
+      - directory: .
+    java:
+      files:
+      - directory: .
+    javascript:
+      files:
+      - directory: .
+      - excludeRegex: node_modules|bower_components|vendor
+    php:
+      files:
+      - directory: .
+    python:
+      files:
+      - directory: .
+    ruby:
+      files:
+      - directory: .
+    wars:
+      extensions: [war]
+      files:
+      - directory: .
+analyze:
+  mode: central
+  coverity:
+    caching:
+      jars: enable
+      pfi: enable
+      rws: disable
+      tu-caching: disable
+    usebudaforjavadotnet: disable
+install:
+  coverity:
+    version: 2021.01-1
+serverUrl: https://ikea.polaris.synopsys.com

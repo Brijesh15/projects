@@ -1,0 +1,22 @@
+*** Settings ***
+Documentation def deh jehf jdehf ehewfh
+Library       BuiltIn
+Library       Collection
+
+*** Keywords ***
+login page
+    Login to Webpage
+    Logout to Webpage
+
+*** Variables ***
+${url}  http://localhost
+@{dict} firstname    lastname
+
+*** Test Cases ***
+My test case
+    open Browser    ${url}
+    Run Keyword If    ${url} == "http://localhost" Login To Webpage   @{dict}
+
+*** Tear Down ***
+tear down
+    Close Browser   ${url}

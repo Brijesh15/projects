@@ -1,10 +1,11 @@
-def c(array):
-    def a():
-        #array.append(2)
-        array=[1,2,3,4]
-        print(array)
-    return a
-arr = [1]
-aa=c(arr)
-aa()
-print(arr)
+w=5
+def f(x):
+    w=2
+    def g(y):
+        w=4
+        def h(z):
+            global w
+            return w*x+y+z
+        return h
+    return g
+print(f(5)(5)(5))

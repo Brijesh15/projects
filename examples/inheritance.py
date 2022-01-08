@@ -1,20 +1,17 @@
-class parent:
-		
-	def display(self):
-		print "employee no:%d"% self.count ,"name :", self.name, "Salary:",self.salary,"\n" 
+class A:
+    def __init__(self):
+        self._i = 1
+        self.j = 5
+        self.__k = 4
+    def display(self):
+        print(self._i, self.j, self.__k)
 
-class child(parent):
-	count=0
-	def __init__(self,name,salary):
-		print "child constructor invoked"
-		self.salary=salary
-		self.name=name
-		child.count+=1
+class B(A):
+    def __init__(self):
+        super().__init__()
+        self._i = 2
+        self.j = 7
+        self.__k = 6
 
-	def childdetail(self):
-		self.display()
-
-#c=child("karan",20000)
-#child("karan",2000).display()
-d=child("Rohan",30000)
-d.childdetail()		
+c = B()
+c.display()

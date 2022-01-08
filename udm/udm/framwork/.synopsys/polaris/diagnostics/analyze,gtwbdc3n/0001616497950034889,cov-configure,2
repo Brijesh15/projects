@@ -1,0 +1,2 @@
+[WARNING] Configuration already exists for file regex ^.*(\.rb|Gemfile)$
+          and it will not be updated.
